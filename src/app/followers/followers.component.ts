@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FollowersComponent implements OnInit {
 
-  constructor() { }
+  private followers: number;
+  private following: number;
 
-  ngOnInit() {
+  public constructor() {
+    this.followers = 2850;
+    this.following = 657;
+  }
+
+  public ngOnInit(): void {
   }
 
 }
