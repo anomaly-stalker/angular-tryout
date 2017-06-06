@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-enum Destination { Bali, Roatan, Paris, Barcelona }
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -9,17 +7,19 @@ enum Destination { Bali, Roatan, Paris, Barcelona }
 })
 export class SearchComponent implements OnInit {
 
-  private destinations: string[];
+  @Input()
+  private filter: Set<string>;
+
+  @Output()
+  private onSelected: EventEmitter<string> = new EventEmitter<string>();
 
   public constructor() { }
 
   public ngOnInit(): void {
-    const options: string[] = Object.keys(Destination);
-    this.destinations = options.slice(options.length / 2);
+    this.filterChanged(this.filter.values().next().value);
   }
 
-  private filterChanged(event: any): void {
-    console.log(event);
+  private filterChanged(item: string): void {
+    this.onSelected.emit(item);
   }
-
 }

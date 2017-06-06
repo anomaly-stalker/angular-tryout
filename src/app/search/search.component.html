@@ -4,7 +4,7 @@
 <div class="element-left-bottom">
 	<div class="ele-strip">
 		<ul>
-			<li *ngFor="let dest of destinations"><a href="#" (click)="filterChanged(dest)">{{dest}}</a></li>
+			<li *ngFor="let item of filter"><a href="#" (click)="filterChanged(item)">{{item}}</a></li>
 		</ul>
 	</div>
 	<div class="village">

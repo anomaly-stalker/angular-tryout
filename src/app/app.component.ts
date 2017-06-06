@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HOTELS } from './hotel.examples';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private title: string = 'app';
+
+  private cities: Set<string> = new Set<string>(HOTELS.map((h: hotel) => h.City));
+  private places: hotel[] = [];
+
+  public ngOnInit(): void {
+  }
+
+  private onCitySelected(city: string): void {
+    console.log('City: ' + city);
+  }
 }
