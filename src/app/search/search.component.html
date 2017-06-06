@@ -4,10 +4,7 @@
 <div class="element-left-bottom">
 	<div class="ele-strip">
 		<ul>
-			<li><a href="#">Hotel</a></li>
-			<li><a href="#">Fishing</a></li>
-			<li><a href="#">Tours</a></li>
-			<li class="anc-bor"><a href="#">Weather</a></li>
+			<li *ngFor="let dest of destinations"><a href="#" (click)="filterChanged(dest)">{{dest}}</a></li>
 		</ul>
 	</div>
 	<div class="village">
