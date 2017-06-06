@@ -2,7 +2,7 @@ type env = { production: boolean };
 
 type hotel = {
   Name: string;
-  City: string;
+  Country: string;
   Description: string;
   LandscapePhoto: string;
   PromoPhoto: string;
