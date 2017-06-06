@@ -15,6 +15,6 @@ export class AppComponent {
   }
 
   private onCountrySelected(country: string): void {
-    console.log('City: ' + country);
+    this.places = HOTELS.filter((h: hotel) => h.Country === country);
   }
 }

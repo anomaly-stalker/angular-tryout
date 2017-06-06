@@ -8,6 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   @Input()
+  private places: hotel[];
+
+  @Input()
   private filter: Set<string>;
 
   @Output()
