@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-followers',
@@ -7,13 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FollowersComponent implements OnInit {
 
-  private followers: number;
-  private following: number;
-
-  public constructor() {
-    this.followers = 2850;
-    this.following = 657;
-  }
+  @Input()
+  private hotel: hotel;
 
   public ngOnInit(): void {
   }

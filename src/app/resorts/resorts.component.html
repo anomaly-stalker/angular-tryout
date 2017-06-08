@@ -1,0 +1,33 @@
+<div class="element-bg-img">
+	<img [src]="selectedHotel.LandscapePhoto" alt="" class="img-responsive">
+</div>
+<div class="element-left-bottom">
+	<div class="ele-strip">
+		<ul>
+			<li *ngFor="let country of countries">
+				<a href="#" (click)="countryChanged($event, country)" class="country">{{country}}</a>
+			</li>
+		</ul>
+	</div>
+	<div class="village">
+		<h3>Righteous indignation & like</h3>
+		<span class="line"> </span>
+		<div class="activity_box">
+			<div class="scrollbar" id="style-2">
+				<a *ngFor="let hotel of selectedHotels" class="activity-row" (click)="hotelChanged($event, hotel)">
+					<div class="activity-desc">
+					<h5>{{hotel.Name}}</h5>
+						<p>{{hotel.Description}}</p>
+					</div>
+					<div class="activity-img">
+						<ul>
+							<li><img [src]="hotel.LandscapePhoto"  alt=""/></li>
+							<li><img [src]='hotel.PromoPhoto'  alt=""/></li>
+						</ul>
+					</div>
+					<div class="clear"> </div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

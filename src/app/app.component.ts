@@ -8,13 +8,13 @@ import { HOTELS } from './hotel.examples';
 })
 export class AppComponent {
 
-  private countries: Set<string> = new Set<string>(HOTELS.map((h: hotel) => h.Country));
-  private places: hotel[] = [];
+  private hotels: hotel[] = HOTELS;
+  private selectedHotel: hotel;
 
   public ngOnInit(): void {
   }
 
-  private onCountrySelected(country: string): void {
-    this.places = HOTELS.filter((h: hotel) => h.Country === country);
+  private onCountrySelected(hotel: hotel): void {
+    this.selectedHotel = hotel;
   }
 }

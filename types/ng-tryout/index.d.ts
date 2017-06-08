@@ -8,4 +8,5 @@ type hotel = {
   PromoPhoto: string;
   Followers: number;
   Following: number;
+  Temperature: number;
 }

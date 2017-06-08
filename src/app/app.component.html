@@ -1,6 +1,6 @@
-<app-search class="element-left" [places]="places" [filter]="countries" (onSelected)="onCountrySelected($event)"></app-search>
+<app-resorts class="element-left" [hotels]="hotels" (onSelected)="onCountrySelected($event)"></app-resorts>
 <div class="element-right">
-	<app-weather class="temperatur"></app-weather>
-	<app-followers class="teddy-bear"></app-followers>
+	<app-weather [hotel]=selectedHotel class="temperatur"></app-weather>
+	<app-followers [hotel]=selectedHotel class="teddy-bear"></app-followers>
 </div>
 <div class="clear"> </div>
